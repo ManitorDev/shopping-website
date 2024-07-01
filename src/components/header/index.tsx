@@ -15,18 +15,22 @@ export const Header = ({}: Props) => {
   useEffect(() => {
     const container = containerRef.current as HTMLDivElement;
 
-    if (scroll > container?.clientHeight) container.classList.add("bg-light");
-    else container.classList.remove("bg-light");
+    if (scroll > container?.clientHeight) container.classList.add("bg-white");
+    else container.classList.remove("bg-white");
   }, [scroll]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  });
 
   return (
-    <div ref={containerRef} className="container-fluid fixed-top">
-      <div className="row p-4">
+    <div
+      style={{ zIndex: "9999 !important" }}
+      ref={containerRef}
+      className="container-fluid sticky-top animate__animated animate__fadeInDown"
+    >
+      <div className="row p-3">
         <div className="col-3">
           <div className="d-flex justify-content-start align-items-center gap-2">
             <img src="/images/vector.png" alt="logo" className="img-fluid" />
