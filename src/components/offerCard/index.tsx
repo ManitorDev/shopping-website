@@ -11,14 +11,14 @@ export const OfferCard = ({}: Props) => {
         style={{ background: "linear-gradient(to bottom, #fbdf56, #e2c642)" }}
         className="row"
       >
-        <div className="col-6">
+        <div className="col-6 d-none d-md-flex align-items-center justify-content-center">
           <img
             className="img-fluid"
             src="/images/offerImage.png"
             alt="Offer image"
           />
         </div>
-        <div className="col-6 d-flex flex-column justify-content-center gap-4 align-items-start p-5">
+        <div className="col-12 col-md-6 d-flex flex-column text-center justify-content-center gap-4 align-items-center align-items-md-start p-5">
           <div className="row">
             <span style={{ fontWeight: "900" }} className="display-2">
               <span className="bg-light p-1 mb-2">PAYDAY</span>

@@ -1,6 +1,9 @@
 "use client";
 import Link from "next/link";
+
 import { useEffect, useRef, useState } from "react";
+
+import MobileNavbar from "./headerMob";
 
 type Props = {};
 
@@ -30,7 +33,7 @@ export const Header = ({}: Props) => {
       ref={containerRef}
       className="container-fluid sticky-top animate__animated animate__fadeInDown"
     >
-      <div className="row p-3">
+      <div className="row d-none d-md-flex p-3">
         <div className="col-3">
           <div className="d-flex justify-content-start align-items-center gap-2">
             <img src="/images/vector.png" alt="logo" className="img-fluid" />
@@ -64,6 +67,9 @@ export const Header = ({}: Props) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="row d-flex d-md-none">
+        <MobileNavbar />
       </div>
     </div>
   );

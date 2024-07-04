@@ -1,3 +1,7 @@
+"use client";
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
+
 type Props = {
   pic: string;
   name: string;

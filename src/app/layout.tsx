@@ -3,7 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import Head from "next/head";
 import { Header } from "@/components/header";
-import "animate.css"
+import "animate.css";
+import Footer from "@/components/footer";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "FASHION | Shopping Website",
@@ -33,7 +35,22 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
+      <Script
+        src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"
+        crossOrigin=""
+      ></Script>
+
+      <Script
+        src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"
+        crossOrigin=""
+      ></Script>
+
+      <Script
+        src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js"
+        crossOrigin=""
+      ></Script>
     </html>
   );
 }

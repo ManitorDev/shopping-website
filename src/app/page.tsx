@@ -4,6 +4,8 @@ import { SectionHero } from "@/components/sectionHero";
 import { RectangleCard } from "@/components/rectangleCard";
 import { OfferCard } from "@/components/offerCard";
 import { YoungRect } from "@/components/youngRect";
+import DownloadCard from "@/components/downloadCard";
+import SendFeadbackForm from "@/components/sendFeadbackForm";
 
 type Rectangle = {
   pic: string;
@@ -32,7 +34,7 @@ export default function Home() {
   return (
     <main className="container-fluid">
       <SectionHero />
-      <div className="row p-4 bg-warning">
+      <div className="row d-none d-lg-flex p-4 bg-warning">
         {/* START BRAND SLIDER */}
         <div className="col-2">
           <Image width={160} height={112} src="/images/amazon.png" alt="" />
@@ -102,6 +104,31 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <DownloadCard />
+
+      {/* START SEND FEADBACK */}
+      <div className="container-fluid bg-warning p-5">
+        <div className="row d-flex flex-column justify-content-center align-items-center gap-4">
+          <div className="row w-75 mx-auto">
+            <span
+              style={{ fontWeight: 900 }}
+              className="fs-1 text-light text-center"
+            >
+              JOIN SHOPPING COMMUNITY TO GET MONTHLY PROMO
+            </span>
+          </div>
+          <div className="row w-75 mx-auto">
+            <span className="fs-5 text-light text-center">
+              Type your email down below and be young wild generation
+            </span>
+          </div>
+          <div className={`row mx-auto `}>
+            <SendFeadbackForm />
+          </div>
+        </div>
+      </div>
+      {/* END SEND FEADBACK */}
     </main>
   );
 }
