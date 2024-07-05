@@ -1,12 +1,41 @@
 "use client";
-
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// gsap.registerPlugin(ScrollTrigger);
 
 type Props = {};
+
 export const SectionHero = ({}: Props) => {
+  // const containerRef = useRef<HTMLDivElement>(null);
+
+  // useEffect(() => {
+  //   const el = containerRef.current as HTMLDivElement;
+  //   gsap.fromTo(
+  //     el,
+  //     { height: "100vh" },
+  //     {
+  //       height: 0,
+  //       duration: 2,
+  //       scrollTrigger: {
+  //         trigger: el,
+  //         scrub: 2,
+  //         start: "bottom 100%",
+  //         end: "bottom 10%",
+  //         markers: {
+  //           startColor: "#000",
+  //           fontSize: "22",
+  //         },
+  //       },
+  //     }
+  //   );
+  // }, []);
+
   return (
-    <div className="container-fluid vh-100">
-      <div className="row h-100">
+    <div className="container-fluid">
+      <div className="row vh-100">
         <div className="col-12 col-md-6 d-flex flex-column gap-4 justify-content-center align-items-center">
           <div className="row">
             <span
